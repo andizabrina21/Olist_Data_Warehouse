@@ -1,2 +1,2 @@
-# Data_Lakehouse_Porto
-This is an end to end data lakehouse project using databricks
+# Olist Data Warehouse Project
+This is an end to end data warehouse project using Olist E-commerce dataset.
