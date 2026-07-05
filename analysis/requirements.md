@@ -16,6 +16,24 @@ Display a summary of total sales, profits and quantity for the current year and 
 - Present the data for each KPI on a monthly basis for both the current year and the previous year.
 - Identify months with highest and loewst sales and make them easy to recognize.
 #### Product Category Comparison
+Compare sales performance by different product categories for the current year and the previous year
+#### Total Revenue by State
+- Present total revenue by each state using map.
+- Highlight state with the highest and lowest revenue.
+
+## Customer Dashboard | Reqirements
+### Dashboard Purpose
+The customer dashboard aims to provide an overview of customer data, trends and behaviors. It will help marketing
+and management to understand customer segments and improve customer satisfaction.
+
+### Key Reqirements
+#### KPI Overview
+Display a summary of total number of customers (including new and repeat customers), total sales per customer and average orders per customers for
+the current year and the previous year.
+#### Customer Trends
+- Present the data for each KPI on a monthly basis for both the current year and the previous year.
+- Identify months with highest and loewst sales and make them easy to recognize.
+#### Product Category Comparison
 - Compare sales performance by different product categories for the current year and the previous year.
 - Include a comparison of sales with profit.
 #### Weekly Trends for Sales & Profit
@@ -25,7 +43,7 @@ Display a summary of total sales, profits and quantity for the current year and 
 
 ## Design & Interactivity Requirements
 ### Dashboard Dynamic
-- The dashboard shoul allow users to check historical data by offering them the flexibility to select
+- The dashboard should allow users to check historical data by offering them the flexibility to select
 any desired year.
 - Provide users with the ability to navigate between the dashboards easily.
 - Make the charts and graphs interactive, enabling users to filter data using the charts.
