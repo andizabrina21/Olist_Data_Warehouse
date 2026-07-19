@@ -21,8 +21,8 @@ This project involves:
 #### Objective
 Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
 #### Spesifications
-- Data Source: Import data from three source systems (ERP, CRM and SCM) provided as CSV files.
-- Data Quality: Cleans and resolve data quality issues prior to analysis.
-- Integration: Combine three sources into a single, user-friendly data mmodel designed for analytical queries.
-- Scope: Focus on the latest dataset only; historization of data is not required.
-- Documentation: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+- **Data Source:** Import data from three source systems (ERP, CRM and SCM) provided as CSV files.
+- **Data Quality:** Cleans and resolve data quality issues prior to analysis.
+- **Integration:** Combine three sources into a single, user-friendly data mmodel designed for analytical queries.
+- **Scope:** Focus on the latest dataset only; historization of data is not required.
+- **Documentation:** Provide clear documentation of the data model to support both business stakeholders and analytics teams.
