@@ -45,3 +45,31 @@ The Gold Layer is the business-level data representation, structured to support 
 | seller_lat           | FLOAT                | Latitude coordinate of the seller's location, derived from the corresponding ZIP code prefix in the geolocation dataset. (e.g., -23.499062689784747).|
 | seller_lng           | FLOAT                | Longitude coordinate of the seller's location, derived from the corresponding ZIP code prefix in the geolocation dataset. (e.g., -46.76793857798514).|
 
+### 3. gold.fact_order_items
+- **Purpose:** Stores transactional sales data for analytical purposes.
+- **Columns:**
+
+| Column Name          | Data Type            | Description                                                                     |
+|----------------------|----------------------|--------------------------------------------------------------------------------- |
+| order_id             | NVARCHAR(50)         | Unique identifier assigned to each order (e.g., '000229ec398224ef6ca0657da4fc703e').  |
+| order_item_id        | INT                  | Sequential number identifying each item within the same order.  |
+| customer_unique_id   | NVARCHAR(50)         | Unique identifier assigned to each customer, allowing the same customer to be identified across multiple orders.  |
+| customer_key         | INT                  | Surrogate key linking the order to the customer dimension table.  |
+| product_key         | INT                  | Surrogate key linking the order to the product dimension table.  |
+| seller_key         | INT                  | Surrogate key linking the order to the seller dimension table.  |
+| order_status         | NVARCHAR(50)                | Current status of the order (e.g., 'delivered', 'shipped', 'canceled').  |
+| order_purchase_timestamp  | DATETIME        | Date and time when the order was placed.  |
+| order_delivered_carrier_date  | DATETIME  | Date and time when the order was handed over to the carrier for shipment.  |
+| order_estimated_delivery_date  | DATETIME  | Estimated date when the order is expected to be delivered to the customer.  |
+| order_delivered_customer_date  | DATETIME  | Date and time when the order was delivered to the customer.  |
+| shipping_limit_date  | DATETIME  | Deadline by which the seller must ship the order to the carrier.  |
+| price  | FLOAT  | Selling price of the purchased product.  |
+| freight_value  | Shipping cost charged for the order item.  |
+| payment_type  | NVARCHAR(50)  | Payment method used for the order (e.g., 'credit_card', 'boleto', 'voucher').  |
+| days_to_delivery  | INT  | Number of days between the purchase date and the actual delivery date.  |
+| days_late      | INT  | Number of days the delivery exceeded the estimated delivery date. A value of 0 indicates the order was delivered on time or earlier.  |
+| days_to_ship_limit  | INT  | Number of days between the purchase date and the shipping deadline.  |
+| is_late_shipment  | INT  | Indicates whether the seller shipped the order after the shipping deadline (0 = No, 1 = Yes).  |
+| review_id  | NVARHCAR(50)  | Unique identifier assigned to each customer review.  |
+| review_score  | INT  | Rating given by the customer, ranging from 1 to 5.  |
+| review_category  | NVARCHAR(50)  | Review sentiment category derived from the review score (e.g., 'Positive', 'Neutral', 'Negative').  |
