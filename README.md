@@ -30,5 +30,24 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 ## Repository Structure
 ```
 olist-data-warehouse/
-|
+│
+├── datasets/                           # Raw datasets used for the project (ERP, CRM and SCM data)
+│
+├── docs/                               # Project documentation and architecture details
+│   ├── data_architecture.png           # PNG image of the project's architecture
+│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
+│   ├── data_flow.png                   # PNG image of the data flow diagram
+│   ├── data_models.drawio              # PNG image of the data models (star schema)
+│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+│
+├── scripts/                            # SQL scripts for ETL and transformations
+│   ├── bronze/                         # Scripts for extracting and loading raw data
+│   ├── silver/                         # Scripts for cleaning and transforming data
+│   ├── gold/                           # Scripts for creating analytical models
+│
+├── tests/                              # Test scripts and quality files
+│
+└── README.md                           # Project overview and instructions
+```
+---
 
