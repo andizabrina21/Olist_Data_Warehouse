@@ -1,0 +1,125 @@
+/*
+ ===============================================================================
+ DDL Script: Create Silver Tables
+ ===============================================================================
+ Script Purpose:
+ 	This script creates tables in the 'silver' schema, dropping existing tables
+ 	if they already exist.
+ 		Run this script to re-define the DDL structure of 'silver' Tables
+  ==============================================================================
+ */
+
+-- ==========================================CUSTOMERS TABLE ====================================================--
+IF OBJECT_ID('silver.crm_customers', 'U') IS NOT NULL
+	DROP TABLE silver.crm_customers;
+
+CREATE TABLE silver.crm_customers(
+    customer_id NVARCHAR(50),
+    customer_unique_id NVARCHAR(50),
+    customer_zip_code_prefix NVARCHAR(5),
+    customer_city NVARCHAR(50),
+    customer_state NVARCHAR(2)
+);
+
+--=============================================== ORDER REVIEWS TABLE ===============================================----
+IF OBJECT_ID('silver.crm_order_reviews', 'U') IS NOT NULL
+	DROP TABLE silver.crm_order_reviews;
+
+CREATE TABLE silver.crm_order_reviews(
+    review_id NVARCHAR(50),
+    order_id NVARCHAR(50),
+    review_score INT,
+    review_comment_title NVARCHAR(50),
+    review_comment_message NVARCHAR(1000),
+    review_creation_date DATETIME,
+    review_answer_timestamp DATETIME
+);
+
+--=============================================== ORDER ITEMS TABLE ===============================================----
+IF OBJECT_ID('silver.erp_order_items', 'U') IS NOT NULL
+	DROP TABLE silver.erp_order_items;
+
+CREATE TABLE silver.erp_order_items(
+    order_id NVARCHAR(50),
+    order_item_id INT,
+    product_id NVARCHAR(50),
+    seller_id NVARCHAR(50),
+    shipping_limit_date DATETIME,
+    price FLOAT,
+    freight_value FLOAT
+);
+
+--=============================================== ORDER PAYMENTS TABLE ===============================================----
+IF OBJECT_ID('silver.erp_order_payments', 'U') IS NOT NULL
+	DROP TABLE silver.erp_order_payments;
+
+CREATE TABLE silver.erp_order_payments(
+    order_id NVARCHAR(50),
+    payment_sequential INT,
+    payment_type NVARCHAR(50),
+    payment_installments INT,
+    payment_value FLOAT
+);
+
+--=============================================== ORDERS TABLE ===============================================----
+IF OBJECT_ID('silver.erp_orders', 'U') IS NOT NULL
+	DROP TABLE silver.erp_orders;
+
+CREATE TABLE silver.erp_orders(
+    order_id NVARCHAR(50),
+    customer_id NVARCHAR(50),
+    order_status NVARCHAR(50),
+    order_purchase_timestamp DATETIME,
+    order_approved_at DATETIME,
+    order_delivered_carrier_date DATETIME,
+    order_delivered_customer_date DATETIME,
+    order_estimated_delivery_date DATETIME
+);
+
+--=============================================== PRODUCTS TABLE ===============================================----
+IF OBJECT_ID('silver.erp_products', 'U') IS NOT NULL
+	DROP TABLE silver.erp_products;
+
+CREATE TABLE silver.erp_products(
+    product_id NVARCHAR(50),
+    product_category_name NVARCHAR(50),
+    product_name_length INT,
+    product_description_length INT,
+    product_photos_qty INT,
+    product_weight_g INT,
+    product_length_cm INT,
+    product_height_cm INT,
+    product_width_cm INT
+);
+
+--=============================================== TRANSLATE CAT_NAME TABLE ===============================================----
+IF OBJECT_ID('silver.erp_category_name_translation', 'U') IS NOT NULL
+	DROP TABLE silver.erp_category_name_translation;
+
+CREATE TABLE silver.erp_category_name_translation(
+    product_category_name NVARCHAR(50),
+    product_category_name_english NVARCHAR(50)
+);
+
+--=============================================== GEOLOCATION TABLE ===============================================----
+IF OBJECT_ID('silver.scm_geolocation', 'U') IS NOT NULL
+	DROP TABLE silver.scm_geolocation;
+
+CREATE TABLE silver.scm_geolocation(
+    geolocation_zip_code_prefix NVARCHAR(5),
+    geolocation_lat FLOAT,
+    geolocation_lng FLOAT,
+    geolocation_city NVARCHAR(50),
+    geolocation_state NVARCHAR(50)
+);
+
+--=============================================== SELLER TABLE ===============================================----
+IF OBJECT_ID('silver.scm_sellers', 'U') IS NOT NULL
+	DROP TABLE silver.scm_sellers;
+
+CREATE TABLE silver.scm_sellers(
+    seller_id NVARCHAR(50),
+    seller_zip_code_prefix NVARCHAR(5),
+    seller_city NVARCHAR(50),
+    seller_state NVARCHAR(2)
+);
