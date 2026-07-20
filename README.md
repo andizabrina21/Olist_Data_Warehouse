@@ -2,8 +2,7 @@
 This project demonstrates the implementation of a data warehouse using the Olist E-commerce dataset, covering the end-to-end process from data ingestion, data cleaning and transformation, dimensional modeling, to the creation of analytical data marts.
 
 _**Notes**_
-Some business scenarios, assumptions, and transformations in this project have been intentionally adapted to better simulate real-world data warehousing practices. As this project is intended for portfolio purposes, certain business rules and derived attributes do not exist in the original Olist dataset and were created to reflect how similar requirements might be implemented in an actual business environment.
-For example, although the data originates from a single Kaggle dataset, it has been logically organized into simulated source systems (CRM, ERP, SCM, etc.) to mimic a typical enterprise data warehouse architecture.
+This project includes several simulated business scenarios, assumptions, and transformations to better reflect real-world data warehousing practices. Since the original Olist dataset is provided as a single dataset rather than data collected from multiple operational systems, it has been logically reorganized into simulated source systems (e.g., CRM, ERP, and SCM) to resemble a typical enterprise data warehouse architecture.
 
 ## Data Architecture
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver** and **Gold** layers:
