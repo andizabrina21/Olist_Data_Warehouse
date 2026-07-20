@@ -1,8 +1,8 @@
 # Olist Data Warehouse Project
-Project ini mendemonstrasikan data warehousing menggunakan data Olist Ecommerce,... 
+This project demonstrates the implementation of a data warehouse using the Olist E-commerce dataset, covering the end-to-end process from data ingestion, data cleaning and transformation, dimensional modeling, to the creation of analytical data marts.
 
 _**Notes**_
-Beberapa skenario project disesuaikan agar ... hanya untuk sekedar latihan yang mendekati real life, tidak benar-benar ada, sehingga perlu diperhatikan..
+Some business scenarios, assumptions, and transformations in this project have been intentionally adapted to better simulate real-world data warehousing practices. As this project is intended for portfolio purposes, certain business rules and derived attributes do not exist in the original Olist dataset and were created to reflect how similar requirements might be implemented in an actual business environment.
 
 ## Data Architecture
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver** and **Gold** layers:
