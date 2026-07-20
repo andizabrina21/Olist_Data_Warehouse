@@ -1,12 +1,25 @@
 # Naming Conventions
 This document outlines conventions used for schemas, tables, views, columns and other objects in the data warehouse.
 
+## **Table of Contents**
+
+1. [General Principles](#general-principles)
+2. [Table Naming Conventions](#table-naming-conventions)
+   - [Bronze Rules](#bronze-rules)
+   - [Silver Rules](#silver-rules)
+   - [Gold Rules](#gold-rules)
+3. [Column Naming Conventions](#column-naming-conventions)
+   - [Surrogate Keys](#surrogate-keys)
+   - [Technical Columns](#technical-columns)
+4. [General Principles](#general-principles)
+
 ## **General Principles**
 - Naming Conventions: Use snake_case, with lowercase letters and underscores (`_`) to separate words.
 - Languages: Use English for all names.
 - Avoid Reserved Words: Do not use SQL reserved words as object names.
 
-## Tabel Naming Conventions
+## **Tabel Naming Conventions**
+
 ### **Bronze Rules**
 - All names must start with the source system name, and table must match their original names but without 'dataset' word.
 - `<sourcesystem>_<entity>`
@@ -38,6 +51,7 @@ This document outlines conventions used for schemas, tables, views, columns and 
 | `report_`     | Report table     | `report_customers`, `report_orders_monthly`  |
 
 ## **Column Naming Conventions**
+
 ### **Surrogate Keys**
 - All primary keys in dimension tables must use the suffix `_key`.
 - `<table_name>_key `
