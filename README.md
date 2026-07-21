@@ -1,5 +1,5 @@
 # Olist Data Warehouse Project
-This project demonstrates the implementation of a data warehouse using the Olist E-commerce dataset, covering the end-to-end process from data ingestion, data cleaning and transformation, dimensional modeling, to the creation of analytical data marts. The analytical findings and business insights generated from this data warehouse can be found in the [Olist Ecommerce Analysis](https://github.com/andizabrina21/Olist_Ecommerce_Analysis) project.
+This project demonstrates the implementation of an end-to-end SQL-based data warehouse using the Olist E-Commerce dataset, covering data ingestion, data cleaning and transformation, dimensional modeling, and the creation of analytical data marts. The analytical findings and business insights generated from this data warehouse can be found in the [Olist Ecommerce Analysis](https://github.com/andizabrina21/Olist_Ecommerce_Analysis) project.
 
 _**Notes**_
 This project includes several simulated business scenarios, assumptions, and transformations to better reflect real-world data warehousing practices. Since the original Olist dataset is provided as a single dataset rather than data collected from multiple operational systems, it has been logically reorganized into simulated source systems (e.g., CRM, ERP, and SCM) to resemble a typical enterprise data warehouse architecture.
